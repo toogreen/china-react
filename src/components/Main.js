@@ -1,7 +1,13 @@
 import React, {Component} from "react"
-//import Article from "./Article"
+import Article from "./Article"
+import CaricatureList from "./CaricatureList"
 import Ad from "./Ad"
-import newsDb from "./newsDb"
+import variables from "./variables"
+import newsDbLeft from "./newsDbLeft"
+import newsDbRight from "./newsDbRight"
+import ArticleList from "./ArticleList"
+import CaricaturesDb from "./CaricaturesDb"
+//import VariablesList from "./VariablesList"
 
 class Main extends Component {
 
@@ -27,9 +33,10 @@ class Main extends Component {
 	render() {
 
 
-		document.getElementById("title").innerHTML = newsDb[0].title
-	    //document.getElementById("slogan").innerHTML = newsDb[0].slogan;
+		//document.getElementById("title").innerHTML = variables[0].title
+	    //document.getElementById("slogan").innerHTML = variables[0].slogan;
 	    //document.getElementById("div4").className = newsDb[0].news2.class
+
 
 		return(
 			<main class="container">
@@ -40,17 +47,17 @@ class Main extends Component {
 
 				<div class="grid">
 
+
+
 					{ 
 					// LEFT COLUMN -->
 					}
 					<div class="left-column">
+	
+						<ArticleList 
+							db={newsDbLeft}
+						/>
 
-						{
-							//<Article
-
-							// />
-						}
-					
 					</div>
 
 
@@ -59,28 +66,9 @@ class Main extends Component {
 					}
 					<div class="middle-column">
 
-
-						<article>
-							<a id="url4" target="_blank">
-								<div id="div4">
-									<h4>Sports</h4>
-									<img id="img4" src="img/img4.jpg" />
-									<h1 id="title4"></h1>
-									<p id="desc4"></p>
-								</div>
-							</a>					
-						</article>
-
-
-						<article>
-							<a id="url5" href="" target="_blank">
-								<div id="div5">
-									<img id="img5" src="img/img5.jpg" />
-									<h1 id="title5"></h1>
-									<p id="desc5"></p>
-								</div>
-							</a>					
-						</article>
+						<ArticleList 
+							db={newsDbRight}
+						/>
 
 					</div>
 
@@ -89,42 +77,13 @@ class Main extends Component {
 					}
 					<div class="right-column">
 
-
-						<article>
-							<a href="#">
-								<div>
-									<h4>Caricatures</h4>
-									<img src="img/caricature.jpg" />
-									<h1></h1>					
-								</div>
-							</a>
-						</article>
-
-						
-						<article>
-							<a href="#">
-								<div>
-									<img src="img/caricature2.jpg" />
-									<h1></h1>
-								</div>
-							</a>					
-						</article>
-
-						
-						<article>
-							<a href="#">
-			                        <div>
-			                                <img src="img/caricature3.jpg" />
-			                                <h1></h1>
-			                        </div>
-			                </a>
-						</article>
-				
-
-
+						<CaricatureList 
+							data={CaricaturesDb}
+						/>					
 
 					</div>
 				</div>
+
 			</main>
 		)
 	}
