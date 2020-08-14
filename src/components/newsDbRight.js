@@ -5,7 +5,7 @@ const newsDb = [
     title:"Houston Rockets Kissing China’s Ass", 
     desc:"A star NBA general manager may lose his job for expressing American values.", 
     url:"https://www.outsidethebeltway.com/houston-rockets-kissing-chinas-ass/",
-    img:"http://toogreen.ca/china/img/img4.jpg",
+    img:"https://toogreen.ca/china/img/img4.jpg",
     class:"card1"
   },
   {
