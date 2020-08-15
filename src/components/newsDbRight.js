@@ -23,7 +23,7 @@ const newsDb = [
     desc:"A comprehensive new report has mapped out the structures [..]",
     url:"https://www.thestar.com/news/canada/2020/06/08/chinas-foreign-interference-likely-widespread-in-canada-says-author-of-new-report.html",
     img:"",
-    class:"card3",
+    class:"card2",
     source:"thestar.com"
   }
 ];
