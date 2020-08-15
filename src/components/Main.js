@@ -32,12 +32,6 @@ class Main extends Component {
 
 	render() {
 
-
-		//document.getElementById("title").innerHTML = variables[0].title
-	    //document.getElementById("slogan").innerHTML = variables[0].slogan;
-	    //document.getElementById("div4").className = newsDb[0].news2.class
-
-
 		return(
 			<main class="container">
 				

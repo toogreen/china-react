@@ -19,5 +19,4 @@ const newsDb = [
   }
 ];
 
-
 export default newsDb
