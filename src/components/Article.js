@@ -9,6 +9,8 @@ function Article(props) {
 					<div id={props.key} className={props.classtype}>
 						<img id={props.key} src={props.img} />
 		 				<h1>{props.title}</h1>
+						<h5><strong>Source:</strong> {props.source}</h5>
+						<br />
 						<p id={props.key}>{props.desc}</p>			
 					</div>
 				</a>

@@ -56,6 +56,16 @@ h4{
   padding-bottom: 15px;
 }
 
+h5{
+  position: relative;
+  font-weight: normal;
+  float: left;
+  padding: 0;
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  margin-top: -10px;
+}
+
 p{
   text-align: left;
   font-size: 14px;
