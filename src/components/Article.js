@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import newsDb from "./newsDb"
 
 //const Article = (props) => (
 //  newsDb.map(item => (
