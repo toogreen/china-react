@@ -4,11 +4,7 @@ function Caricature(props) {
 
 	return(
 		<article>
-			<a href="#">
-				<div>
-					<img key={props.key} src={props.img} />
-				</div>
-			</a>
+			<img key={props.key} src={props.img} />
 		</article>
 	)
 

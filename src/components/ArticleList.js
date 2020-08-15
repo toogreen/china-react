@@ -10,6 +10,7 @@ const ArticleList = (props) => (
 		    img={item.img}
 		    desc={item.desc}
 		    classtype={item.class}
+		    url={item.url}
         />
     ))  
 );

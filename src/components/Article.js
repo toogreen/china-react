@@ -5,11 +5,11 @@ function Article(props) {
 
 	return(
 		<article>
-				<a id="" href="" target="_blank">
-					<div id="" className={props.classtype}>
-						<img id="" src={props.img} />
+				<a id={props.key} href={props.url} target="_blank">
+					<div id={props.key} className={props.classtype}>
+						<img id={props.key} src={props.img} />
 		 				<h1>{props.title}</h1>
-						<p id="">{props.desc}</p>			
+						<p id={props.key}>{props.desc}</p>			
 					</div>
 				</a>
 		</article>
