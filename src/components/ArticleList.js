@@ -2,7 +2,7 @@ import React from 'react';
 import Article from "./Article"
    
 const ArticleList = (props) => (
-    props.db.map(item => (
+    props.db.filter(item => item.col === props.col).map(item => (
         <Article 
        		key={item.id} 
 		   	news={item.news}

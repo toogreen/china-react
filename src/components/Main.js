@@ -3,8 +3,7 @@ import Article from "./Article"
 import CaricatureList from "./CaricatureList"
 import Ad from "./Ad"
 import variables from "./variables"
-import newsDbLeft from "./newsDbLeft"
-import newsDbRight from "./newsDbRight"
+import newsDb from "./newsDb"
 import ArticleList from "./ArticleList"
 import CaricaturesDb from "./CaricaturesDb"
 //import VariablesList from "./VariablesList"
@@ -49,7 +48,8 @@ class Main extends Component {
 					<div class="left-column">
 	
 						<ArticleList 
-							db={newsDbLeft}
+							db={newsDb}
+							col="left"
 						/>
 
 					</div>
@@ -61,7 +61,8 @@ class Main extends Component {
 					<div class="middle-column">
 
 						<ArticleList 
-							db={newsDbRight}
+							db={newsDb}
+							col="right"
 						/>
 
 					</div>
