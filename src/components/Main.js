@@ -3,7 +3,7 @@ import Article from "./Article"
 import CaricatureList from "./CaricatureList"
 import Ad from "./Ad"
 import variables from "./variables"
-import newsDb from "./newsDb"
+//import newsDb from "./newsDb"
 import ArticleList from "./ArticleList"
 import CaricaturesDb from "./CaricaturesDb"
 //import VariablesList from "./VariablesList"
@@ -16,6 +16,7 @@ class Main extends Component {
 	constructor() {
 		super()
 		this.state = {
+			NewsData: [],
 			count: 0
 		}
 	}
@@ -69,7 +70,7 @@ class Main extends Component {
 					<div class="left-column">
 	
 						<ArticleList 
-							db={newsDb}
+							db={this.state.NewsData}
 							col="left"
 						/>
 
@@ -82,7 +83,7 @@ class Main extends Component {
 					<div class="middle-column">
 
 						<ArticleList 
-							db={newsDb}
+							db={this.state.NewsData}
 							col="right"
 						/>
 
