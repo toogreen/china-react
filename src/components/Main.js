@@ -10,6 +10,9 @@ import CaricaturesDb from "./CaricaturesDb"
 
 class Main extends Component {
 
+	// Interval for refresh of data
+	interval = null;
+
 	constructor() {
 		super()
 		this.state = {
@@ -18,16 +21,34 @@ class Main extends Component {
 	}
 
 	componentDidMount() {
-	//	this.setState({loading: true})
-	//	fetch(newsDb)
-	//		.then(response => response.json())
-	//		.then(response => {
-	//			const {memes} = response.data
-	//
-	//			this.setState({ allMemeImgs: memes })
-	//			console.log(memes[0])
-	//		})
+		// Every 60 seconds this fetch a new version of the data
+		this.interval = setInterval(this.getData, 60000);
+
+		// Fetch data from getData function lower down
+    	this.getData();
+	}	
+
+	componentWillUnmount() {
+		clearInterval(this.interval);
 	}
+
+
+	getData = () => {
+
+		//fetch("http://localhost:3001/china")
+		fetch("https://my-json-server.typicode.com/toogreen/myjsondata/db")
+			.then(response => response.json())
+			.then(response => {
+				
+				//const newsDb = response
+				const newsDb = response.china
+				
+				this.setState({ NewsData: newsDb })
+				
+			})
+
+	}
+
 
 	render() {
 
