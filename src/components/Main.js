@@ -3,7 +3,7 @@ import Article from "./Article"
 import CaricatureList from "./CaricatureList"
 import Ad from "./Ad"
 import variables from "./variables"
-//import newsDb from "./newsDb"
+import newsDb from "./newsDb"
 import ArticleList from "./ArticleList"
 import CaricaturesDb from "./CaricaturesDb"
 //import VariablesList from "./VariablesList"
@@ -23,21 +23,21 @@ class Main extends Component {
 
 	componentDidMount() {
 		// Every 60 seconds this fetch a new version of the data
-		this.interval = setInterval(this.getData, 60000);
+		//this.interval = setInterval(this.getData, 60000);
 
 		// Fetch data from getData function lower down
-    	this.getData();
+    	//this.getData();
 	}	
 
 	componentWillUnmount() {
-		clearInterval(this.interval);
+		//clearInterval(this.interval);
 	}
 
 
 	getData = () => {
 
 		//fetch("http://localhost:3001/china")
-		fetch("https://my-json-server.typicode.com/toogreen/myjsondata/db")
+/* 		fetch("https://my-json-server.typicode.com/toogreen/myjsondata/db")
 			.then(response => response.json())
 			.then(response => {
 				
@@ -46,7 +46,7 @@ class Main extends Component {
 				
 				this.setState({ NewsData: newsDb })
 				
-			})
+			}) */
 
 	}
 
@@ -70,7 +70,7 @@ class Main extends Component {
 					<div class="left-column">
 	
 						<ArticleList 
-							db={this.state.NewsData}
+							db={newsDb}
 							col="left"
 						/>
 
@@ -83,7 +83,7 @@ class Main extends Component {
 					<div class="middle-column">
 
 						<ArticleList 
-							db={this.state.NewsData}
+							db={newsDb}
 							col="right"
 						/>
 
